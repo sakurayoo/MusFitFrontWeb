@@ -599,6 +599,7 @@
     let infoModal = document.querySelector("#infoModal" + i);
     let close = document.querySelector("#close" + i);
     btn.addEventListener("click", function () {
+      e.preventDefault();
       document.getElementById("infoModal" + i).style.opacity = "0";
       setTimeout(function () {
         infoModal.showModal();
@@ -607,6 +608,7 @@
     }
     )
     close.addEventListener("click", function () {
+      e.preventDefault();
       document.getElementById("infoModal" + i).style.opacity = "0";
       setTimeout(function () {
         document.getElementById("infoModal" + i).style.opacity = "1";
@@ -617,6 +619,7 @@
   }
   function closedialog() {
     close.addEventListener("click", function () {
+      e.preventDefault();
       document.getElementById("infoModal1").style.opacity = "0";
       setTimeout(function () {
         document.getElementById("infoModal1").style.opacity = "1";
