@@ -1,0 +1,29 @@
+    .main {
+        font-family: Arial;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    img{
+        border-radius: 10px;
+    }
+
+    .a {
+        transform: scale(.85);
+        opacity: .5;
+        transition: transform .3s cubic-bezier(.4,0,.2,1);
+    }
+    .a:hover {
+        transform: scale(1);
+        opacity: 1;
+        transition: transform .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    .slick-center>div {
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 10px;
+
+    }

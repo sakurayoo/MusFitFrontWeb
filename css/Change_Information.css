@@ -1,0 +1,91 @@
+body{
+    height:500px;
+}
+
+.change_information {
+    position: relative;
+    padding: 10px 25px;
+    justify-content: center;
+}
+
+input[type="radio"] {
+    accent-color: #EE307E;
+}
+
+.change_information button {
+    background-color: #ECAAC9;
+    color: white;
+}
+
+    .change_information .btnEdit {
+        justify-content: right;
+    }
+
+.change_information img {
+    border: 2px solid #FAE5ED;
+    border-radius: 50%;
+    object-fit:cover;
+}
+
+.photoFile {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background-color: #FAE5ED;
+    color: black;
+    text-align: center;
+    -web-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-family: Arial,Microsoft JhengHei;
+    width: 20%;
+    margin: 10px auto;
+}
+
+    .photoFile input {
+        position: absolute;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100%;
+    }
+
+button:focus{
+     border-color: white;
+    box-shadow: 0 0px 0px , 0 0 0px transparent;
+}
+
+button:hover {
+    border-color: #F5B2D2;
+    background-color: #F5B2D2;
+}
+
+@media(max-width:1000px) {
+    body {
+        width: auto;
+    }
+
+    .icon-menu {
+        color: #17202A;
+    }
+}
+
+@media(max-width:800px) {
+    body {
+        width: auto;
+    }
+
+    .icon-menu {
+        color: #17202A;
+    }
+}
+
+@media(max-width:600px) {
+    .icon-menu {
+        color: #17202A;
+    }
+}

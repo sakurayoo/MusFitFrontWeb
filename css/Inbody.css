@@ -1,0 +1,39 @@
+@media(max-width:1000px) {
+    body {
+        width: auto;
+    }
+
+    .d-inline-block .site-menu-toggle .icon-menu {
+        color: #000;
+    }
+}
+
+@media(max-width:800px) {
+    body {
+        width: auto;
+    }
+
+    .icon-menu {
+        color: #17202A;
+    }
+}
+
+@media(max-width:600px) {
+    body {
+        width: auto;
+    }
+
+    .icon-menu {
+        color: #17202A;
+    }
+}
+
+
+.inbody {
+    height: 100%;
+}
+
+input[type="radio"] {
+    pointer-events: none;
+    accent-color: #EE3080;
+}

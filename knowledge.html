@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/layoutstyle.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="../css/title.css">
+
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <title>知識專欄 | MusFit - 享受生活</title>
+</head>
+
+<style>
+  /* https://github.com/ButTaiwan/gensen-font */
+  body {
+    font-family: "GenSenRounded";
+
+  }
+
+  dialog {
+
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px #ccc;
+    border-radius: 10px;
+    width: 80vw;
+    height: 80vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+
+
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  #infoModal {
+    transition: 0.5s;
+  }
+
+  .infoModal {
+    transition: 0.5s;
+    /*opacity: 0.5; */
+
+  }
+
+  .close:hover {
+    transition: 0.5s;
+    color: red;
+  }
+
+  .close {
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+  }
+
+  #close:hover {
+    transition: 0.5s;
+    color: red;
+  }
+
+  #close {
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+  }
+
+
+  .w-full:hover {
+    scale: 1.02;
+  }
+
+  .w-full {
+    transition: 0.5s;
+
+  }
+
+  .ml5 {
+    position: relative;
+    font-weight: 300;
+    font-size: 4.5em;
+    color: #402d2d;
+  }
+
+  .ml5 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+    line-height: 1em;
+  }
+
+  .ml5 .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #D39080;
+    transform-origin: 0.5 0;
+  }
+
+  .ml5 .ampersand {
+    font-family: Baskerville, serif;
+    font-style: italic;
+    font-weight: 400;
+    width: 1em;
+    margin-right: -0.1em;
+    margin-left: -0.1em;
+  }
+
+  .ml5 .letters {
+    display: inline-block;
+    opacity: 0;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<body>
+
+  <div class="site-mobile-menu site-navbar-target" style="font-family:'GenSenRounded';">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
+
+
+
+  <div class="site-navbar site-navbar-target js-sticky-header" style="font-family:'GenSenRounded';position: fixed; z-index:100; ">
+    <!--style="height:15vh;"-->
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-1">
+          <h1 class="my-0 site-logo"><a href="index.html"></a></h1>
+        </div>
+        <div class="col-11">
+          <nav class="site-navigation text-right" role="navigation">
+            <div class="container">
+              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                  class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"
+                    style="color: rgb(31, 18, 18);"></span></a></div>
+
+              <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+                <li><a href="index.html" class="nav-link">關於我們</a></li>
+                <li><a href="news.html" class="nav-link">最新消息</a></li>
+                <li class="has-children">
+                  <a href="class.html" class="nav-link">課程介紹</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="yoga.html" class="nav-link">瑜珈</a></li>
+                    <li><a href="aerobic.html" class="nav-link">有氧</a></li>
+                    <!-- <li class="has-children">
+          <a href="#">More Links</a>
+          <ul class="dropdown">
+            <li><a href="#">Menu One</a></li>
+            <li><a href="#">Menu Two</a></li>
+            <li><a href="#">Menu Three</a></li>
+          </ul>
+        </li> -->
+                  </ul>
+                </li>
+                <li><a href="coach.html" class="nav-link">認識教練</a></li>
+                <li><a href="Classroom.html" class="nav-link">環境簡介</a></li>
+                <li><a href="knowledge.html" class="nav-link">知識專欄</a></li>
+                <!-- 注意!!!!!!!!!!!!!!!!，這邊需要判斷會員是否已經登入!! -->
+
+                <!-- 登入前 -->
+
+                <li><a href="creat.html" class="nav-link">預約表單</a></li>
+                <li><a href="#" class="nav-link">會員登入</a></li>
+
+                <!-- 登入前 結束 -->
+
+                <!-- 登入後 -->
+
+                <!-- <li class="has-children">
+                      <a href="#" class="nav-link">會員專區</a>
+                      <ul class="dropdown arrow-top">
+                        <li><a href="#" class="nav-link">個人資料</a></li>
+                        <li><a href="#" class="nav-link">個人課表</a></li>
+                        <li><a href="#" class="nav-link">課程紀錄</a></li>
+                        <li><a href="#" class="nav-link">InBody紀錄</a></li>
+                        <li>　</li>
+
+                      </ul>
+                    </li>  -->
+
+                <!-- 登入後 結束 -->
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="../../../"><img id="LOGOimg" src="../image/LOGO_text.png"
+      style="position: fixed; z-index:100; width:100px; top:3%; left:5%"></a>
+
+
+
+
+
+  <div class="see">
+    <div style="display: flex; justify-content: center; 
+          align-items: center;
+          height:  300px;
+          background-size: 100% auto;
+          background-image: linear-gradient(to top, rgb(255, 255, 255),rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+          ">
+      <span class="ml5" style="color:#753b2d;
+                 font-family: 'GenSenRounded';font-size:3em">
+        <span class="text-wrapper">
+          <span class="line line1"></span>
+          <span class="letters letters-left">知 識</span>
+          <span class="letters letters-right">專欄</span>
+          <span class="line line2"></span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+
+  <div class="flex flex-wrap -m-3" style="margin: 2vw; " 
+  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+    <!-- 以下開始跑迴圈 -->
+    <div  id="show1"
+      class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3 aos-init aos-animate"><a href="#review">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
+
+          <div class="bg-cover h-48" style="background-image: url(/image/know/1.jpg); background-position:center;">
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="mb-1 text-2xl" style="color:black;font-weight:bold">
+              健身前必讀攻略！6個初學健身項目教學！
+            </h3>
+            <span class="mb-3" style="color:black">2023/2/6</span>
+            <div class="mb-4 text-grey-darker text-sm flex-1">
+              <p>活動方式：
+                會員使用World......(點我查看更多)
+              </p>
+            </div>
+            <div class="mb-4 text-grey-darker text-sm flex-1" style="text-align: right;">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <dialog id="infoModal1" class="infoModal">
+
+      <div style="display: flex;">
+        <div style="width: 85%;
+          " id="testarea">
+
+          <h1 style="font-family: 'GenSenRounded';">團體優惠：邀請好友活動</h1>
+          <a href="#12"><img style="max-width:70vw; max-height:40vh;" src="/image/know/1.jpg"></a><br>
+          <span style="white-space:pre-line;">
+            開始健身前，初學者必知道的健身項目、健身觀念、健身菜單安排、健身女該如何增肌或減脂、知道自己的健身最大肌耐力，才能有效安全的訓練。健身後的飲食控制也很重要，營養師教妳計算TDEE與每天應該要吃進多少蛋白質！想要靠少吃來達到減肥效果已經過時了～往下來看看為大家準備的健身大補帖吧！
+            健身迷思Q1:重訓的話會越練越壯嗎？
+
+            →女生體內的睪固酮沒有男生多，因此要形成肌肉相對困難，因此不會一下子就練得很壯或是肌肉變得硬邦邦！千萬別擔心～
+
+            健身迷思Q2:減肥時，是把脂肪轉成肌肉嗎？
+
+            →脂肪不會變成肌肉，正確觀念為脂肪消除後，生成肌肉。因此教練也表示減脂相對是較為簡單的，真正困難在「增肌」！
+
+            健身迷思Q3:這麼努力健身，體重卻增加了正常嗎？
+
+            →如果沒有健身習慣，剛開始運動後體重增加是正常的！好處是在增加肌肉可以增加代謝率，更幫助脂肪燃燒歐！
+
+            健身迷思Q4:對於運動我只喜歡做有氧、慢跑，這樣有效嗎？
+
+            →大多人認為有氧可以幫助脂肪燃燒，但教練建議初學者以「重訓為主、有氧為輔」增加肌肉量也可以更快達到理想體態！
+          </span>
+          <img style="max-width:70vw; max-height:40vh;" src="/image/know/2.jpg">
+        </div>
+        <div style="width: 15%;  text-align: right; height:60px; position:fixed; top:12%; right:11%;">
+          <span id="close1" style="font-size: 50px;" class="close"><a href="#close" class="close"
+              style="font-size: 50px;">×</a></span>
+        </div>
+      </div>
+
+    </dialog>
+    <div  id="show2"
+      class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3 aos-init aos-animate"><a href="#review">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
+
+          <div class="bg-cover h-48" style="background-image: url(/image/know/3.jpg);  background-position:center;">
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="mb-1 text-2xl" style="color:black;font-weight:bold">
+              你知道「自由重量」跟「固定式器材」的差異嗎？
+            </h3>
+            <span class="mb-3" style="color:black">2023/2/6</span>
+            <div class="mb-4 text-grey-darker text-sm flex-1">
+              <p>1️⃣ 自由重量：包含啞鈴、槓......(點我查看更多)
+              </p>
+            </div>
+            <div class="mb-4 text-grey-darker text-sm flex-1" style="text-align: right;">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <dialog id="infoModal2" class="infoModal">
+
+      <div style="display: flex;">
+        <div style="width: 85%;
+          " id="testarea">
+          <h1 style="font-family: 'GenSenRounded';">你知道「自由重量」跟「固定式器材」的差異嗎？</h1>
+            <img style="max-width:70vw; max-height:40vh;" src="/image/know/3.jpg">
+            <span style="white-space:pre-line;">
+              1️⃣ 自由重量：包含啞鈴、槓鈴、壺鈴等，他的阻力來源是地心引力，所以阻力的方向都是垂直向下的，操作上應該考量到阻力方向，使目標肌群刺激更大。
+              自由重量動作許多都屬於多關節動作，能同時訓練更多肌群，耗能也較大，且需核心肌群來固定軀幹保持穩定。
+              缺點因為操作較靈活、彈性、開放，所以操作上難度會較高，阻力方向單一較難針對單一肌群做訓練，如果操作不慎也容易受傷。
+
+              2️⃣ 固定式器械：包含腿推機、胸推機、划船機等，相對於自由重量，會因設計角度改變阻力方向，它的好處是都有固定軌跡，操作上更能針對目標肌群訓練；如果是剛康復的患者，也可以更安全的復健增加肌力。
+              健美式訓練會需要更多的角度來雕碩各個肌肉的線條，這時固定式器械就是較好的選擇，且器械能幫住穩定關節，孤立肌肉效果較好，能在不同的角度讓肌肉得到較大的刺激。
+              同時如果最後要把肌肉榨乾做到力竭，也是比較安全的選擇。
+
+              缺點因爲固定式的軌道，所以不同身材比例的人有時會沒辦法抓到最適合自己的角度；如果第一次操作沒人指導，搞不懂動作細節、肌肉發力順序，不僅感受度差，也是容易受傷，別的肌肉代償，使訓練效果打折，反而愈練愈多問題。
+              3️⃣「自由重量」及「固定式器材」各有優缺點，沒有哪個是絕對好或壞的，單看你的訓練目標及身體狀況，來選擇適合自己的器具動作來訓練。
+              如有任何疑問還是需要專業教練幫忙，才能離自己的目標邁進，且減少受傷的風險。
+            </span>
+            <img style="max-width:70vw; max-height:40vh;" src="/image/know/4.jpg">
+        </div>
+        <div style="width: 15%;
+                                text-align: right;
+                           height:60px;
+              position:fixed;
+                            top:12%;
+                                 right:11%;">
+          <span id="close2" style="font-size: 50px;" class="close"><a href="#close" class="close"
+              style="font-size: 50px;">×</a></span>
+        </div>
+      </div>
+
+    </dialog>
+    <div  id="show3"
+      class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3 aos-init aos-animate"><a href="#review">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
+          <div class="bg-cover h-48" style="background-image: url(/image/know/5.jpg);  background-position:center;">
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="mb-1 text-2xl" style="color:black;font-weight:bold">
+              迷思｜大重量訓練很危險
+            </h3>
+            <span class="mb-3" style="color:black">2023/2/6</span>
+            <div class="mb-4 text-grey-darker text-sm flex-1">
+              <p>許多人認為重量訓練很危險，特別......(點我查看更多)
+              </p>
+            </div>
+            <div class="mb-4 text-grey-darker text-sm flex-1" style="text-align: right;">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <dialog id="infoModal3" class="infoModal">
+
+      <div style="display: flex;">
+        <div style="width: 85%;
+          " id="testarea">
+
+          <h1 style="font-family: 'GenSenRounded';">迷思｜大重量訓練很危險</h1>
+          <a href="#14">
+            <img style="max-width:70vw; max-height:40vh;" src="/image/know/5.jpg"></a><br>
+          <span style="white-space:pre-line;">
+            迷思｜大重量訓練很危險
+            許多人認為重量訓練很危險，特別是大重量的危險性更高，我可以瞭解人們的擔憂。硬舉、深蹲和臥推都需要舉起大重量，和慢跑、騎腳踏車或是做體操相比較，舉重看起來更像是自找死路，而不是自律訓練。
+
+            在網路上搜尋一下就會發現非常多足以令人怯步的資訊，輕則因 為重訓而關節、肌肉疼痛，重則全身無力，沒吃消炎止痛藥之前連鞋帶都無法自己綁。
+
+            因此，重量訓練在這幾十年來一直受到輿論的束縛，肌力訓練更是受到聲討。值得慶幸的是，時代在進步，人們的思維也在轉變，肌力訓練越來越受到大眾的歡迎，但仍然有很多人認為它的危險性遠遠 超過帶來的好處。
+            重量訓練確實有風險，但並不像人們想得那麼糟糕。諷刺的是，研究指出在正確操作下，重量訓練可以是最安全的運動項目之一。
+
+            澳洲邦德大學針對二十份研究的回顧指出，平均每一千小時的健 美運動才會造成一次運動傷害。也就是說，如果你每週花五個小時做重量訓練，你在四年內幾乎 都不會受傷。研究人員還指出，大多數的傷害都是輕微的疼痛，無需
+            進行治療或復建，休息一下就能恢復體力了。
+
+            當然，像是奧林匹克舉重、全方位體適能訓練（CrossFit）、健力等，激烈、需要技術的運動誠然會導致更多的傷害，但其實數量遠 比大家所想的少。這些訓練每一千小時僅造成二到四次受傷。
+
+            相比之下，研究顯示冰球、足球和美式橄足球，每一千小時就可 能發生六到二百六十例的運動傷害，而長跑也約有十例的傷害會發 生。換句話說，這些日常運動的受傷比例足足比在健身房訓練高出六到十倍。
+            重量訓練的效益很大，對健康有許多益處，無法從其他運動中獲得。
+          </span>
+          <img style="max-width:70vw; max-height:40vh;" src="/image/know/6.jpg">
+        </div>
+        <div style="width: 15%;
+                                text-align: right;
+                           height:60px;
+              position:fixed;
+                            top:12%;
+                                 right:11%;">
+          <span id="close3" style="font-size: 50px;" class="close"><a href="#close" class="close"
+              style="font-size: 50px;">×</a></span>
+        </div>
+      </div>
+
+    </dialog>
+    <div  id="show4"
+      class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3 aos-init"><a href="#review">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
+
+          <div class="bg-cover h-48"
+            style="background-image: url(/image/know/7.jpg);                                                          background-position:center;">
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="mb-1 text-2xl" style="color:black;font-weight:bold">
+              喝酒對健身的影響有哪些？
+            </h3>
+            <span class="mb-3" style="color:black">2023/2/6</span>
+            <div class="mb-4 text-grey-darker text-sm flex-1">
+              <p>在飲酒之後，你的肌肉將停止......(點我查看更多)
+              </p>
+            </div>
+            <div class="mb-4 text-grey-darker text-sm flex-1" style="text-align: right;">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <dialog id="infoModal4" class="infoModal">
+
+      <div style="display: flex;">
+        <div style="width: 85%;
+          " id="testarea">
+
+          <h1 style="font-family: 'GenSenRounded';">喝酒對健身的影響有哪些？</h1>
+          <a href="#15">
+            <img style="max-width:70vw; max-height:40vh;" src="/image/know/7.jpg"></a><br>
+          <span style="white-space:pre-line;">
+            在飲酒之後，你的肌肉將停止「重建」肌肉組織的過程，因此運動的目的：打造更強壯的肌肉、提升能量與活力…等等全部生理機能都會受到影響而慢下來，除此之外，喝酒對於健身還會有什麼樣直接與間接的影響呢？以下我們將一一為大家揭曉：
+
+            降低能量，提升疲勞感
+            酒精的分解過程發生在肝臟中，當肝臟試圖分解酒精時，其他功能都將受到延緩，其中包括葡萄糖(Glucose)的生成作用，而我們人體最主要的能量來源來自葡萄糖，當你的肝臟無法提供足夠的葡萄糖時，你就容易感到疲勞、也難以跟上運動的步調。
+            降低身體敏感度
+            酒精常被人誤以為是精神振奮劑，實則為一種精神抑制劑，會使得腦中樞鈍化、讓體內傳遞訊息的神經系統慢下來、來到一個更放鬆的狀態，這將使得運動中的你較不易察覺疲累，不知不覺地已經超過身體原先可以負荷的運動量、同時也會影響你的協調性、精準度和平衡感等等。
+            運動健身不瘦反胖
+            前面我們提到每1公克的酒精含有7卡熱量，幾乎與膳食脂肪(每1公克含9大卡熱量)相差不遠，酒精被視為「空熱量(Empty Calories)」，空熱量是指營養價值不高卻帶來大量的熱量，而且很多人在幾杯黃湯下肚後，更喜歡吃高油、高鹽、高熱量的食物來配酒，對於體重管理更是大忌。根據營養師推薦，每週盡量維持在4、5杯以內，再視你的減脂進度而定是否該繼續降低飲酒量。在適度的飲用範圍內，某些酒可以幫助增加好的膽固醇(HDL)，但超過這個範圍好的膽固醇不見得跟著增加，反而只有糖分不斷增加而已！若是選擇添加充滿糖分的果汁、可樂等調酒，熱量更不在話下。
+            肌肉成長緩慢
+            除了前面我們提及的酒精影響肌肉重建，還有另一件頗值得一提的是─酒精容易干擾睡眠，而在深眠時間釋放的成長激素(Growth Hormones)也會減少分泌，肌肉成長效果大打折扣。
+            改變心跳頻率
+            最令人擔心的事項之一─飲酒可能造成不尋常心跳頻率的產生，尤其在大量飲酒後，兩天後仍可能為高危險期，運動已經幫助提升心率，若再加上體內中存在著大量的酒精，那麼你的心臟可能將存在於較大的壓力之中。
+            受傷難癒合
+            酒精促使分布在全身，如皮膚、雙手和雙腳上的血管擴張，導致供血量提升，此時若發生任何流血、扭傷或腫脹的情況，將更難癒合。
+            心血管疾病風險
+            酒精可以導致血栓(Blood Clot)發生，尤其在運動之後血栓發生的機率更高，對於有心臟疾病的人或者高風險者都應避免在運動結束之後飲用酒精。
+             
+          </span>
+          <img style="max-width:70vw; max-height:40vh;" src="/image/know/8.jpg">
+        </div>
+        <div style="width: 15%;
+                                text-align: right;
+                           height:60px;
+              position:fixed;
+                            top:12%;
+                                 right:11%;">
+          <span id="close4" style="font-size: 50px;" class="close"><a href="#close" class="close"
+              style="font-size: 50px;">×</a></span>
+        </div>
+      </div>
+
+    </dialog>
+    <div  id="show5"
+      class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3 aos-init"><a href="#review">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
+
+          <div class="bg-cover h-48"
+            style="background-image: url(/image/know/9.jpg);                                                          background-position:center;">
+          </div>
+          <div class="p-4 flex-1 flex flex-col">
+            <h3 class="mb-1 text-2xl" style="color:black;font-weight:bold">
+              2023 MusFit減重比賽
+            </h3>
+            <span class="mb-3" style="color:black">2023/2/5</span>
+            <div class="mb-4 text-grey-darker text-sm flex-1">
+              <p>※限FITZONE會員......(點我查看更多)
+              </p>
+            </div>
+            <div class="mb-4 text-grey-darker text-sm flex-1" style="text-align: right;">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <dialog id="infoModal5" class="infoModal">
+
+      <div style="display: flex;">
+        <div style="width: 85%;
+          " id="testarea">
+
+          <h1 style="font-family: 'GenSenRounded';">2023 MusFit減重比賽</h1>
+          <a href="#10">
+            <img style="max-width:70vw; max-height:40vh;" src="/image/know/9.jpg"></a><br> <span style="white-space:pre-line;">
+            ※限FITZONE會員
+
+
+            ■獎項內容 各店男女分組
+
+            第一名 現金 $3,600+World Gym 三個月運動會籍+運動大浴巾
+
+            第二名 現金 $2,000+World Gym 二個月運動會籍+運動口罩
+
+            第三名 現金 $1,000+World Gym 一個月運動會籍+高蛋白杯
+          </span>
+          <img style="max-width:70vw; max-height:40vh;" src="/image/know/10.jpg">
+        </div>
+        <div style="width: 15%;
+                                text-align: right;
+                           height:60px;
+              position:fixed;
+                            top:12%;
+                                 right:11%;">
+          <span id="close5" style="font-size: 50px;" class="close"><a href="#close" class="close"
+              style="font-size: 50px;">×</a></span>
+        </div>
+      </div>
+
+    </dialog>
+
+  </div>
+
+
+
+</body>
+
+
+
+<script>
+  AOS.init();
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- <script src="js/jquery.sticky.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="../js/title.js"></script>
+
+<!-- <script src="js/jquery.sticky.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+
+<script>
+  // let btn = document.querySelector("#show");
+  // let infoModal = document.querySelector("#infoModal");
+  // let close = document.querySelector("#close");
+  // btn.addEventListener("click", function () {
+  //     infoModal.showModal();
+  // })
+  // close.addEventListener("click", function () {
+  //     infoModal.close();
+  // })
+
+
+  for (let i = 1; i <= 5; i++) {
+    let btn = document.querySelector("#show" + i);
+    let infoModal = document.querySelector("#infoModal" + i);
+    let close = document.querySelector("#close" + i);
+    btn.addEventListener("click", function () {
+      document.getElementById("infoModal" + i).style.opacity = "0";
+      setTimeout(function () {
+        infoModal.showModal();
+        document.getElementById("infoModal" + i).style.opacity = "1";
+      }, 100);
+    }
+    )
+    close.addEventListener("click", function () {
+      document.getElementById("infoModal" + i).style.opacity = "0";
+      setTimeout(function () {
+        document.getElementById("infoModal" + i).style.opacity = "1";
+        infoModal.close();
+      }, 500);
+
+    })
+  }
+  function closedialog() {
+    close.addEventListener("click", function () {
+      document.getElementById("infoModal1").style.opacity = "0";
+      setTimeout(function () {
+        document.getElementById("infoModal1").style.opacity = "1";
+        infoModal.close();
+      }, 500);
+    })
+  }
+
+  AOS.init();
+
+</script>
+
+</html>
