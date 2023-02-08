@@ -32,7 +32,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <title>t知識專欄 | MusFit - 享受生活</title>
+  <title>知識專欄 | MusFit - 享受生活</title>
 </head>
 
 <style>
@@ -594,39 +594,7 @@
   // })
 
 
-  for (let i = 1; i <= 5; i++) {
-    let btn = document.querySelector("#show" + i);
-    let infoModal = document.querySelector("#infoModal" + i);
-    let close = document.querySelector("#close" + i);
-    btn.addEventListener("click", function () {
-      e.preventDefault();
-      document.getElementById("infoModal" + i).style.opacity = "0";
-      setTimeout(function () {
-        infoModal.showModal();
-        document.getElementById("infoModal" + i).style.opacity = "1";
-      }, 100);
-    }
-    )
-    close.addEventListener("click", function () {
-      e.preventDefault();
-      document.getElementById("infoModal" + i).style.opacity = "0";
-      setTimeout(function () {
-        document.getElementById("infoModal" + i).style.opacity = "1";
-        infoModal.close();
-      }, 500);
-
-    })
-  }
-  function closedialog() {
-    close.addEventListener("click", function () {
-      e.preventDefault();
-      document.getElementById("infoModal1").style.opacity = "0";
-      setTimeout(function () {
-        document.getElementById("infoModal1").style.opacity = "1";
-        infoModal.close();
-      }, 500);
-    })
-  }
+ 
 
   AOS.init();
 
